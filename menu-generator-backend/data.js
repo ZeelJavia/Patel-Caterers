@@ -1,6 +1,6 @@
 // data.js
 
-export const menuData = [
+const menuData = [
   {
     id: "snacks",
     name: "Snacks",
@@ -1152,3 +1152,5 @@ export const menuData = [
     ],
   },
 ];
+
+module.exports = { menuData };
