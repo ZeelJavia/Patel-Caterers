@@ -5,7 +5,7 @@ const User = require("../models/User");
 const connectDB = async () => {
   try {
     const conn = await mongoose.connect(
-      "mongodb://127.0.0.1:27017/patel-caterers",
+      "" + process.env.MONGODB_URI,
       {
         family: 4, // Use IPv4
       }

@@ -7,7 +7,7 @@ require("dotenv").config();
 
 const connectDB = async () => {
   try {
-    await mongoose.connect("mongodb://127.0.0.1:27017/patel-caterers", {
+    await mongoose.connect("" + process.env.MONGODB_URI, {
       family: 4,
     });
     console.log("✅ Connected to MongoDB");
