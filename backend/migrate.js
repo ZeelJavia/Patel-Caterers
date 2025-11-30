@@ -36,24 +36,32 @@ const migrateData = async () => {
 
     // Migrate menu items from data.js if available
     try {
-      const menuData = require("./data.js");
+      const { menuData } = require("./data.js");
       const menuItems = [];
 
       // Extract menu items from the menuData structure
-      Object.keys(menuData).forEach((category) => {
-        menuData[category].forEach((item) => {
-          menuItems.push({
-            category: category,
-            name: item.name || item,
-            description: item.description || "",
-            price: item.price || 0,
-            isVeg: item.isVeg !== false, // default to true
-            isAvailable: true,
-            tags: item.tags || [],
-            preparationTime: item.preparationTime || 30,
-          });
+      // menuData is an array of category objects
+      if (Array.isArray(menuData)) {
+        menuData.forEach((categoryObj) => {
+          if (categoryObj.items && Array.isArray(categoryObj.items)) {
+            categoryObj.items.forEach((item) => {
+              menuItems.push({
+                category: categoryObj.id,
+                categoryName: categoryObj.name,
+                categoryNameGujarati: categoryObj.nameGujarati,
+                name: item.name,
+                nameGujarati: item.nameGujarati,
+                originalId: item.id,
+                description: item.description || "",
+                price: item.price || 0,
+                isVeg: item.isVeg !== false, // default to true
+                isAvailable: true,
+                tags: item.tags || [],
+              });
+            });
+          }
         });
-      });
+      }
 
       if (menuItems.length > 0) {
         await MenuItem.insertMany(menuItems);

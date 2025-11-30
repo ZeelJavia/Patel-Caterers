@@ -35,98 +35,98 @@ const Gallery = () => {
     {
       id: 1,
       category: "weddings",
-      title: "Elegant Wedding Reception",
-      description: "Beautiful wedding setup with traditional decorations",
+      title: "Elegant Celebrations",
+      description: "Creating timeless memories",
       size: "large",
       image: "/imge1.png",
     },
     {
       id: 2,
       category: "food",
-      title: "Authentic Gujarati Thali",
-      description: "Complete traditional meal presentation",
+      title: "Traditional Feast",
+      description: "Pure taste of tradition",
       size: "medium",
       image: "/imge2.png",
     },
     {
       id: 3,
       category: "corporate",
-      title: "Corporate Conference Lunch",
-      description: "Professional catering for business event",
+      title: "Premium Catering",
+      description: "Excellence in every detail",
       size: "small",
       image: "/imge3.png",
     },
     {
       id: 4,
       category: "birthdays",
-      title: "Birthday Party Setup",
-      description: "Colorful birthday celebration catering",
+      title: "Joyful Moments",
+      description: "Celebrating life's milestones",
       size: "medium",
       image: "/imge4.png",
     },
     {
       id: 5,
-      category: "festivals",
-      title: "Navratri Festival Catering",
-      description: "Traditional festival food arrangement",
+      category: "weddings",
+      title: "Royal Hospitality",
+      description: "Where tradition meets luxury",
       size: "large",
-      image: "/imge5.png",
+      image: "/imge12.png",
     },
     {
       id: 6,
       category: "food",
-      title: "Dessert Counter",
-      description: "Variety of Indian sweets and desserts",
+      title: "Traditional Indian Soup",
+      description: "Rich and comforting flavors",
       size: "small",
       image: "/imge6.png",
     },
     {
       id: 7,
       category: "weddings",
-      title: "Outdoor Wedding Buffet",
-      description: "Garden wedding catering setup",
+      title: "South Indian Classics",
+      description: "Crispy dosas and authentic chutneys",
       size: "medium",
       image: "/imge7.JPG",
     },
     {
       id: 8,
       category: "corporate",
-      title: "Business Meeting Snacks",
-      description: "Professional meeting refreshments",
+      title: "Professional Events",
+      description: "Impeccable hospitality",
       size: "small",
       image: "/imge8.jpg",
     },
     {
       id: 9,
       category: "food",
-      title: "Live Cooking Station",
-      description: "Chef preparing fresh food at event",
+      title: "Live Stations",
+      description: "Freshness in every bite",
       size: "large",
       image: "/imge9.png",
     },
     {
       id: 10,
       category: "birthdays",
-      title: "Kids Party Catering",
-      description: "Fun and colorful kids party setup",
+      title: "Magical Gatherings",
+      description: "Fun, food, and festivities",
       size: "medium",
       image: "/imge10.png",
     },
     {
       id: 11,
       category: "festivals",
-      title: "Diwali Celebration",
-      description: "Festival of lights catering service",
+      title: "Cultural Heritage",
+      description: "Celebrating with authentic taste",
       size: "small",
       image: "/imge11.jpg",
     },
     {
       id: 12,
-      category: "weddings",
-      title: "Mehendi Ceremony",
-      description: "Pre-wedding ceremony catering",
+      category: "festivals",
+      title: "Festive Traditions",
+      description: "The taste of celebration",
       size: "large",
-      image: "/imge12.png",
+      image: "/imge5.png",
     },
   ];
 
@@ -223,7 +223,16 @@ const Gallery = () => {
                   />
                 </div>
 
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-0 group-hover:opacity-30 transition-opacity duration-500" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                  <div className="absolute bottom-0 left-0 right-0 p-6 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                    <h3 className="text-xl font-bold text-white mb-1">
+                      {item.title}
+                    </h3>
+                    <p className="text-amber-200 text-sm font-medium">
+                      {item.description}
+                    </p>
+                  </div>
+                </div>
               </div>
             ))}
           </div>
