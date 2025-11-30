@@ -1,0 +1,303 @@
+{
+  "events": [
+    {
+      "_id": "b33e83ed-404d-47a7-acaf-3d70221f7398",
+      "eventName": "Wedding",
+      "clientName": "Zeel Javia",
+      "eventDate": "2025-07-20",
+      "location": "Faddu Vadi , Junagadh",
+      "contactInfo": "6355172901",
+      "subEvents": [
+        {
+          "id": "795ebd25-76ab-4990-9a90-245c298c49b6",
+          "name": "Breakfast",
+          "date": "2025-07-20",
+          "pax": "200",
+          "price": "300",
+          "items": {
+            "snacks": [
+              "gathiya-jalebi",
+              "french-frys",
+              "bataka-pauha",
+              "bread-butter-jam"
+            ]
+          }
+        },
+        {
+          "id": "0961e737-b4ef-472b-a57b-0cbbcfdbfa4e",
+          "name": "Lunch",
+          "date": "2025-07-20",
+          "pax": "400",
+          "price": "500",
+          "items": {
+            "soups": [
+              "hot-sour",
+              "veg-manchow"
+            ],
+            "starters": [
+              "veg-dry-manchurian"
+            ],
+            "sweets-mithai": [
+              "mohan-thal-lachko",
+              "rajbhog-mesub"
+            ],
+            "punjabi-dishes": [
+              "sp-patel-paneer",
+              "paneer-angara"
+            ],
+            "gujarati-subzi": [
+              "veg-toofani",
+              "veg-jaipuri"
+            ],
+            "kathiyawadi-kathol": [
+              "sev-dungri"
+            ],
+            "indian-breads": [
+              "stuff-naan",
+              "garlic-naan",
+              "fulka-roti-live"
+            ],
+            "farshan": [
+              "sev-khamani"
+            ],
+            "dal-rice": [
+              "gujarati-dal",
+              "kadhi",
+              "rajasthani-kadhi",
+              "dal-fry"
+            ],
+            "special-counters": [
+              "cold-drinks-counter"
+            ]
+          }
+        },
+        {
+          "id": "6ea4ad3e-7f36-430f-a1e0-bc34fa2c8064",
+          "name": "Dandiya Ras",
+          "date": "2025-07-20",
+          "pax": "300",
+          "price": "200",
+          "items": {
+            "farshan": [
+              "samosa",
+              "sev-roll"
+            ],
+            "special-counters": [
+              "cold-drinks-counter"
+            ]
+          }
+        },
+        {
+          "id": "39404940-bb76-4ead-af1b-66100f6c4a98",
+          "name": "Main Function",
+          "date": "2025-07-21",
+          "pax": "600",
+          "price": "1000",
+          "items": {
+            "soups": [
+              "veg-manchow",
+              "hot-sour",
+              "cream-of-almond"
+            ],
+            "starters": [
+              "paneer-chilli-dry",
+              "paneer-tikka-roasted"
+            ],
+            "chat-plate": [
+              "pani-puri"
+            ],
+            "sizzler-chinese": [
+              "mexican-sizzler"
+            ],
+            "italian-south-indian": [
+              "pasta-red-white",
+              "onian-pizza"
+            ],
+            "salads-sweets": [
+              "mix-salad"
+            ],
+            "sweets-mithai": [
+              "kesar-almond",
+              "anjeer-halwa"
+            ],
+            "punjabi-dishes": [
+              "paneer-chatpata",
+              "paneer-angara"
+            ],
+            "gujarati-subzi": [
+              "veg-corn-dumaloo",
+              "veg-jaipuri"
+            ],
+            "kathiyawadi-kathol": [
+              "moong-masala",
+              "sev-dungri"
+            ],
+            "indian-breads": [
+              "methi-naan",
+              "palak-naan",
+              "masala-thepla",
+              "fulka-roti-live"
+            ],
+            "farshan": [
+              "pudla",
+              "patra",
+              "khandvi"
+            ],
+            "dal-rice": [
+              "handi-biryani",
+              "veg-biryani"
+            ],
+            "special-counters": [
+              "cold-drinks-counter",
+              "ice-cream-counter",
+              "mocktail-counter"
+            ]
+          }
+        }
+      ],
+      "createdAt": "2025-07-19T16:01:44.103Z",
+      "notes": "",
+      "updatedAt": "2025-11-02T08:28:38.708Z"
+    },
+    {
+      "_id": "593d15c0-c514-4572-92f5-77369692e16d",
+      "eventName": "Birthday Party ",
+      "clientName": "Zeel Javia",
+      "eventDate": "2025-07-20",
+      "location": "Junagadh",
+      "contactInfo": "6355172901",
+      "subEvents": [
+        {
+          "id": "8e96740d-6c9e-4e44-a27b-bcb340fb62cd",
+          "name": "Meal #1",
+          "date": "2025-07-20",
+          "pax": "200",
+          "price": "300",
+          "items": {
+            "snacks": [
+              "gathiya-jalebi",
+              "bataka-pauha"
+            ]
+          }
+        },
+        {
+          "id": "acb367da-6451-4461-9e0b-51c2b47c8d1e",
+          "name": "Meal #2",
+          "date": "2025-07-20",
+          "pax": "200",
+          "price": "100",
+          "items": {
+            "juices-shakes": [
+              "mint-mojito",
+              "paina-orange",
+              "orange"
+            ],
+            "starters": [
+              "paneer-chilli-dry",
+              "paneer-tikka-roasted"
+            ]
+          }
+        },
+        {
+          "id": "451f9fd1-fcd7-459f-9c6a-d06e6771032a",
+          "name": "Meal #3",
+          "date": "2025-07-20",
+          "pax": "0",
+          "price": "0",
+          "items": {
+            "italian-south-indian": [
+              "pasta-red-white",
+              "palak-pasta",
+              "schezwan-idli",
+              "medu-vada-south"
+            ],
+            "snacks": [
+              "gathiya-jalebi",
+              "bataka-pauha"
+            ]
+          }
+        }
+      ],
+      "createdAt": "2025-07-19T16:09:40.004Z"
+    },
+    {
+      "_id": "d1d03c17-82f5-416f-9816-1b71ddb75871",
+      "eventName": "Merrige",
+      "clientName": "dinesh bhai",
+      "eventDate": "2025-08-09",
+      "location": "surat",
+      "contactInfo": "6355172901",
+      "subEvents": [
+        {
+          "id": "df8d9a44-23de-42a9-8e53-4c4cd969d1bc",
+          "name": "breakfast",
+          "date": "2025-08-09",
+          "pax": "100",
+          "price": "100",
+          "items": {
+            "snacks": [
+              "gathiya-jalebi",
+              "khakhra",
+              "khajali",
+              "farci-puri",
+              "__custom__:snacks:Custom%20Item:1762071001921",
+              "__custom__:snacks:Custom%20item%202:1762071027150"
+            ],
+            "farshan": [
+              "__custom__:farshan:custom%201:1762071096213"
+            ]
+          }
+        },
+        {
+          "id": "8b33b212-942f-4264-84fc-051d39606948",
+          "name": "Meal #2",
+          "date": "2025-08-09",
+          "pax": "100",
+          "price": "200",
+          "items": {
+            "soups": [
+              "veg-manchow",
+              "cream-of-tomato"
+            ],
+            "starters": [
+              "paneer-tikka-roasted",
+              "dragan-potato",
+              "italian-volvo"
+            ],
+            "italian-south-indian": [
+              "pasta-red-white",
+              "pasta-macaroni-penne"
+            ]
+          }
+        },
+        {
+          "id": "e7fac187-3955-47e9-a1cd-bb0f660445f2",
+          "name": "Meal #3",
+          "date": "2025-08-09",
+          "pax": "1",
+          "price": "0",
+          "items": {
+            "snacks": [
+              "khajali"
+            ],
+            "farshan": [
+              "mix-dhokla",
+              "nylon-khaman"
+            ],
+            "dal-rice": [
+              "dry-fruit-pulav",
+              "veg-pulav"
+            ],
+            "special-counters": [
+              "shayari-pan-counter",
+              "fruit-dish-counter"
+            ]
+          }
+        }
+      ],
+      "createdAt": "2025-08-09T11:05:21.095Z",
+      "notes": "Note1 \nnote2\nNote3\nNote4",
+      "updatedAt": "2025-11-02T08:11:54.029Z"
+    }
+  ]
+}
