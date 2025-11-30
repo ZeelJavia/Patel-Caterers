@@ -206,7 +206,7 @@ const Home = () => {
             {[
               { number: "900+", label: "Events Catered" },
               { number: "15+", label: "Years Experience" },
-              { number: "50+", label: "Menu Items" },
+              { number: "300+", label: "Menu Items" },
               { number: "100%", label: "Satisfaction Rate" },
             ].map((stat, index) => (
               <div key={index}>

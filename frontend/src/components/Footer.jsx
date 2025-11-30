@@ -1,14 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import {
-  Phone,
-  Mail,
-  MapPin,
-  Clock,
-  Facebook,
-  Instagram,
-  Twitter,
-} from "lucide-react";
+import { Phone, Mail, MapPin, Clock, Facebook, Instagram } from "lucide-react";
 import mainLogo from "../assets/main-logo.png";
 
 const Footer = () => {
@@ -22,7 +14,7 @@ const Footer = () => {
               <img
                 src={mainLogo}
                 alt="Patel Caterers"
-                className="h-12 w-12 rounded-full"
+                className="h-16 w-16 rounded-xl p-1 bg-white"
               />
               <div>
                 <h3 className="text-2xl font-bold text-white">
@@ -38,7 +30,7 @@ const Footer = () => {
             </p>
             <div className="flex space-x-4">
               <a
-                href="#"
+                href="https://www.facebook.com/patelcaterersjnd"
                 className="bg-amber-600 p-3 rounded-full hover:bg-amber-700 transition-colors"
               >
                 <Facebook className="h-5 w-5" />
@@ -48,12 +40,6 @@ const Footer = () => {
                 className="bg-amber-600 p-3 rounded-full hover:bg-amber-700 transition-colors"
               >
                 <Instagram className="h-5 w-5" />
-              </a>
-              <a
-                href="#"
-                className="bg-amber-600 p-3 rounded-full hover:bg-amber-700 transition-colors"
-              >
-                <Twitter className="h-5 w-5" />
               </a>
             </div>
           </div>
