@@ -2,7 +2,7 @@
 const API_CONFIG = {
   // JSON File Mode (original)
   JSON_MODE: {
-    BASE_URL: "http://localhost:3001",
+    BASE_URL: import.meta.env.VITE_API_URL || "http://localhost:3001",
     EVENTS: "/api/events",
     MENU_DATA: "/api/menu-data",
     PDF_GENERATION: "/generate-pdf",
