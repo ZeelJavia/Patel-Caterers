@@ -36,14 +36,14 @@ const createContact = async (req, res) => {
     const transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
-        user: "zeeljavia123@gmail.com",
-        pass: "ghvf ssjy mwzu llqe",
+        user: "patelcaterersjnd13@gmail.com",
+        pass: "nuwh mqhz uhye wxzo",
       },
     });
 
     const mailOptions = {
       from: '"Patel Caterers Website" <no-reply@patelcaterers.com>',
-      to: "zeeljavia123@gmail.com",
+      to: "patelcaterersjnd13@gmail.com",
       subject: `New Catering Inquiry: ${contact.eventType} - ${contact.name}`,
       html: `
         <div style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; max-width: 600px; margin: 0 auto; border: 1px solid #e5e7eb; border-radius: 8px; overflow: hidden;">
@@ -113,7 +113,7 @@ const createContact = async (req, res) => {
     // Attempt to send email
     try {
       await transporter.sendMail(mailOptions);
-      console.log("Email sent successfully to zeeljavia123@gmail.com");
+      console.log("Email sent successfully to patelcaterersjnd13@gmail.com");
     } catch (emailError) {
       console.error("Failed to send email:", emailError);
       // We continue even if email fails, as the contact is saved

@@ -13,11 +13,13 @@ import {
   Filter,
   Grid3X3,
   List,
+  X,
 } from "lucide-react";
 
 const Gallery = () => {
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [viewMode, setViewMode] = useState("grid"); // grid or masonry
+  const [selectedImage, setSelectedImage] = useState(null);
 
   const categories = [
     { id: "all", name: "All Photos", icon: Camera },
@@ -35,7 +37,8 @@ const Gallery = () => {
       category: "weddings",
       title: "Elegant Wedding Reception",
       description: "Beautiful wedding setup with traditional decorations",
-      size: "large", // Different sizes for variety
+      size: "large",
+      image: "/imge1.png",
     },
     {
       id: 2,
@@ -43,6 +46,7 @@ const Gallery = () => {
       title: "Authentic Gujarati Thali",
       description: "Complete traditional meal presentation",
       size: "medium",
+      image: "/imge2.png",
     },
     {
       id: 3,
@@ -50,6 +54,7 @@ const Gallery = () => {
       title: "Corporate Conference Lunch",
       description: "Professional catering for business event",
       size: "small",
+      image: "/imge3.png",
     },
     {
       id: 4,
@@ -57,6 +62,7 @@ const Gallery = () => {
       title: "Birthday Party Setup",
       description: "Colorful birthday celebration catering",
       size: "medium",
+      image: "/imge4.png",
     },
     {
       id: 5,
@@ -64,6 +70,7 @@ const Gallery = () => {
       title: "Navratri Festival Catering",
       description: "Traditional festival food arrangement",
       size: "large",
+      image: "/imge5.png",
     },
     {
       id: 6,
@@ -71,6 +78,7 @@ const Gallery = () => {
       title: "Dessert Counter",
       description: "Variety of Indian sweets and desserts",
       size: "small",
+      image: "/imge6.png",
     },
     {
       id: 7,
@@ -78,6 +86,7 @@ const Gallery = () => {
       title: "Outdoor Wedding Buffet",
       description: "Garden wedding catering setup",
       size: "medium",
+      image: "/imge7.JPG",
     },
     {
       id: 8,
@@ -85,6 +94,7 @@ const Gallery = () => {
       title: "Business Meeting Snacks",
       description: "Professional meeting refreshments",
       size: "small",
+      image: "/imge8.jpg",
     },
     {
       id: 9,
@@ -92,6 +102,7 @@ const Gallery = () => {
       title: "Live Cooking Station",
       description: "Chef preparing fresh food at event",
       size: "large",
+      image: "/imge9.png",
     },
     {
       id: 10,
@@ -99,6 +110,7 @@ const Gallery = () => {
       title: "Kids Party Catering",
       description: "Fun and colorful kids party setup",
       size: "medium",
+      image: "/imge10.png",
     },
     {
       id: 11,
@@ -106,6 +118,7 @@ const Gallery = () => {
       title: "Diwali Celebration",
       description: "Festival of lights catering service",
       size: "small",
+      image: "/imge11.jpg",
     },
     {
       id: 12,
@@ -113,6 +126,7 @@ const Gallery = () => {
       title: "Mehendi Ceremony",
       description: "Pre-wedding ceremony catering",
       size: "large",
+      image: "/imge12.png",
     },
   ];
 
@@ -185,18 +199,6 @@ const Gallery = () => {
       {/* Gallery Grid */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center py-16 bg-gray-50 rounded-2xl border-2 border-dashed border-gray-300">
-            <Camera className="h-16 w-16 text-gray-400 mx-auto mb-4" />
-            <h3 className="text-2xl font-bold text-gray-900 mb-2">
-              Photo Gallery Coming Soon!!!
-            </h3>
-            <p className="text-gray-600">
-              We are currently curating our best moments to share with you. Stay
-              tuned!
-            </p>
-          </div>
-
-          {/* 
           <div
             className={`grid gap-6 ${
               viewMode === "grid"
@@ -204,44 +206,24 @@ const Gallery = () => {
                 : "grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
             }`}
           >
-            {filteredItems.slice(0, 8).map((item, index) => (
+            {filteredItems.map((item, index) => (
               <div
                 key={item.id}
                 className={`group cursor-pointer relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 ${getSizeClasses(
                   item.size,
                   viewMode
                 )}`}
+                onClick={() => setSelectedImage(item)}
               >
-                <div className="absolute inset-0 bg-gradient-to-br from-amber-100 to-orange-100 group-hover:scale-110 transition-transform duration-700">
-                  <div className="w-full h-full flex items-center justify-center text-amber-200 opacity-30">
-                    <Camera size={64} />
-                  </div>
+                <div className="absolute inset-0 group-hover:scale-110 transition-transform duration-700">
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
 
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-500" />
-
-                <div className="absolute inset-0 p-6 flex flex-col justify-end">
-                  <div className="absolute top-4 right-4 transform translate-y-[-10px] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
-                    <span className="bg-amber-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-lg">
-                      {categories.find((cat) => cat.id === item.category)?.name}
-                    </span>
-                  </div>
-
-                  <div className="transform translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
-                    <h3 className="text-2xl font-bold text-white mb-2 drop-shadow-md">
-                      {item.title}
-                    </h3>
-                    <p className="text-gray-200 text-sm leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100 line-clamp-2">
-                      {item.description}
-                    </p>
-                  </div>
-                </div>
-
-                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-all duration-500 scale-50 group-hover:scale-100">
-                  <div className="bg-white/20 backdrop-blur-sm p-4 rounded-full border border-white/50">
-                    <Sparkles className="text-white h-8 w-8" />
-                  </div>
-                </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-0 group-hover:opacity-30 transition-opacity duration-500" />
               </div>
             ))}
           </div>
@@ -256,10 +238,30 @@ const Gallery = () => {
                 Try selecting a different category to view more photos.
               </p>
             </div>
-          )} 
-          */}
+          )}
         </div>
       </section>
+
+      {/* Image Modal */}
+      {selectedImage && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-4 backdrop-blur-sm"
+          onClick={() => setSelectedImage(null)}
+        >
+          <button
+            className="absolute top-4 right-4 text-white hover:text-amber-500 transition-colors"
+            onClick={() => setSelectedImage(null)}
+          >
+            <X size={32} />
+          </button>
+          <img
+            src={selectedImage.image}
+            alt={selectedImage.title}
+            className="max-w-full max-h-[90vh] object-contain rounded-lg shadow-2xl"
+            onClick={(e) => e.stopPropagation()}
+          />
+        </div>
+      )}
 
       {/* Call to Action */}
       <section className="py-20 bg-gradient-to-br from-amber-600 to-orange-600 text-white">
