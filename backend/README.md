@@ -47,8 +47,3 @@ If migrating from JSON to MongoDB, run:
 ```bash
 npm run migrate
 ```
-
-## Admin Credentials
-
-- **Email**: `patelcaterersjnd13@gmail.com`
-- **Password**: `patel1234`
